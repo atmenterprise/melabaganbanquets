@@ -1,0 +1,24 @@
+# Site settings
+title: Melabagan Banquets
+email: enquiry@melabaganbanquets.com
+description: Multi-purpose banquet hall for wedding, receptions, business and other events
+baseurl: "/"
+url: ""
+
+logo: 'img/logo/'
+
+facebook_url: https://www.facebook.com/profile.php?id=61570893481192
+instagram_url:
+whatsapp_url: https://wa.me/919051312223?text=Hello
+address_url: https://maps.app.goo.gl/6HFwjRgQVPdL7Fxh9
+google_analytics_id:
+calendy_url: https://calendly.com/admin-melabaganbanquets/schedule
+
+# Developer settings
+developer_name: ATM Enterprise
+developer_webpage: https://atmenterprise.github.io/atm/
+twitter_username:
+github_username:
+
+# Build settings
+markdown: kramdown
