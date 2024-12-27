@@ -218,7 +218,6 @@ header {
     }
 }
 
-
 @keyframes imageFadeIn {
     from {
         transform: scale(1.05);
@@ -230,7 +229,6 @@ header {
 }
 
 // Sections
-
 .section-heading {
     margin-top: 0;
 }
@@ -245,7 +243,7 @@ header {
         margin-bottom: 0;
     }
 }
-
+/*
 .portfolio-box {
     position: relative;
     display: block;
@@ -301,7 +299,7 @@ header {
         }
     }
 }
-
+*/
 
 
 
@@ -441,10 +439,6 @@ body {
   }
 }
 
-/*.change-text {
-  font-size: 2rem;
-}*/
-
 .change-text::after {
   //display: block;
   content: "Wedding";
@@ -518,26 +512,30 @@ body {
   height: 100%;
   width: 100%;
 }
+
 .slide p {
   text-align: center;
   padding: 0 160px;
-  font-size: 14px;
+  font-size: 15px;
   font-weight: 400;
-  color: white;
+  color: black;
 }
+
 .slide .quote-icon {
   font-size: 30px;
-  color: white;
+  color: black;
 }
+
 .slide .details {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
+
 .details .name {
   font-size: 14px;
   font-weight: 600;
-  color: white;
+  color: black;
 }
 
 /* swiper button css */
@@ -546,23 +544,30 @@ body {
   width: 40px;
   border-radius: 50%;
   transform: translateY(30px);
-  background-color: rgba(0, 0, 0, 0.1);
+  //background-color: rgba(0, 0, 0, 0.1);
   transition: 0.2s;
+  //background-color: #25373D;
 }
+
 .swipper-nav-btn:hover {
   //background-color: rgba(0, 0, 0, 0.2);
 }
+
 .swipper-nav-btn::after,
 .swipper-nav-btn::before {
   font-size: 20px;
-  color: white;
+  //color: white;
+  color: #25373D;
 }
+
 .swiper-pagination-bullet {
-  background-color: rgba(0, 0, 0, 0.8);
+  //background-color: rgba(0, 0, 0, 0.8);
 }
+
 .swiper-pagination-bullet-active {
   background-color: white;
 }
+
 @media screen and (max-width: 768px) {
   .slide p {
     padding: 0 20px;
@@ -570,4 +575,149 @@ body {
   .swipper-nav-btn {
     display: none;
   }
+}
+
+/* Find us section */
+
+.findus-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.findus-column {
+    flex: 1 1 calc(50% - 20px);
+    margin: 10px;
+    text-align: center;
+    border-right: 1px solid white;
+}
+
+.findus-column:last-child{
+    border-right: none;
+}
+
+.findus-column p,
+.findus-column ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.findus-column ul li {
+    margin: 5px 0;
+    text-align: left;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.icons-light {
+    background-color:  #F6F7F2;
+}
+
+iframe {
+    border: 0;
+    width: 100%;
+    height: 300px;
+    border-radius: 8px;
+    //box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 768px) {
+    .column {
+        flex: 1 1 100%;
+        margin: 10px 0;
+    }
+
+    iframe {
+        height: 250px;
+    }
+}
+
+@media (max-width: 480px) {
+    section#findus {
+        padding: 20px 10px;
+    }
+
+    .column h3 {
+        font-size: 1.3rem;
+    }
+
+    .lead {
+        font-size: 1rem;
+    }
+
+    iframe {
+        height: 200px;
+    }
+}
+
+/* Contact CSS */
+.contact-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.contact-column {
+    flex: 1 1 calc(50% - 20px);
+    margin: 10px;
+    text-align: center;
+    border-right: 1px solid $theme-primary;
+}
+
+.contact-column:last-child{
+    border-right: none;
+}
+
+.contact-column label {
+    display: flex;
+    flex-direction: column;
+    //font-size: 1rem;
+    color: #333;
+}
+
+.contact-column input[type="text"],
+.contact-column input[type="email"],
+.contact-column textarea {
+    width: 100%;
+    padding: 10px;
+    //font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.contact-column textarea {
+    height: 100px;
+    resize: vertical;
+}
+
+.text-italic{
+    font-size: 1rem;
+    font-style: italic;
+}
+
+.contact-column label h5 {
+    margin: 0;
+    padding-bottom: 5px;
+    font-weight: bold;
+    display: inline-block;
+}
+
+.contact-column label {
+        //margin: 10px;
+        padding: 10px;
+        text-align: left;
+}
+
+.contact-column label span {
+    font-size: 0.9rem;
+    font-style: italic;
+    color: #555;
+    margin-left: 8px;
+    display: inline-block;
+    //vertical-align: top;
 }
