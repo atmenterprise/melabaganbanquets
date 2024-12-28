@@ -12,5 +12,41 @@
 <!-- Custom Theme JavaScript -->
 <script src="js/creative.js"></script>
 
-<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-<script src="js/swiper.js"> </script>
+<script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+
+<script src="js/swiper-bundle.min.js"></script>
+
+<!-- for popup of the images -->
+<script>
+document.querySelectorAll('.gallery-col .image').forEach(image => {
+    image.addEventListener('click', () => {
+        const imgSrc = image.querySelector('img').getAttribute('src');
+        const popup = document.querySelector('.popup-image');
+        popup.style.display = 'block';
+        popup.querySelector('img').src = imgSrc;
+    });
+});
+
+document.querySelector('.popup-image span').addEventListener('click', () => {
+    document.querySelector('.popup-image').style.display = 'none';
+});
+</script>
+
+<!-- swiper -->
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+        var swiper = new Swiper(".mySwiper", {
+            slidesPerView: 1,
+            grabCursor: true,
+            loop: true,
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+        });
+ });
+</script>

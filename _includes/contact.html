@@ -34,14 +34,14 @@
                 </p>
             </div>
             <div class="contact-column">
-                <form action="{{site.formspree_url}}" method="POST">
-                    <label><h5>Name</h5><!-- <span class="text-italic">(required)</span> -->
-                        <input type="text" name="name" placeholder="first name last name">
+                <form action="{{ site.formspree_url }}" method="POST">
+                    <label><h5>Name<span class="text-italic">(required)</span></h5>
+                        <input type="text" name="name" placeholder="your first and last name">
                     </label>
-                    <label><h5>Phone Number</h5><!-- <span class="text-italic">(required)</span> -->
-                        <input type="text" name="phone" placeholder="+91">
+                    <label><h5>Phone Number<span class="text-italic">(required)</span></h5>
+                        <input type="text" name="phone" placeholder="+91 ">
                     </label>
-                    <label><h5>Email</h5><!-- <span class="text-italic">(required)</span> -->
+                    <label><h5>Email<span class="text-italic">(required)</span></h5>
                         <input type="email" name="email" placeholder="your@email.com">
                     </label>
                     <label><h5>Your Message</h5>
@@ -49,6 +49,11 @@
                     </label>
                     <button type="submit" class="btn btn-primary btn-xl">Submit</button>
                 </form>
+                <br>
+                <p class="small">
+                    By Clicking on Submit button, you are agreeing to sharing your name, phone and email with Melabagan Banquets.
+                    Read More on our privacy and data protection policies in here.
+                </p>
             </div>
         </div>
     </div>
