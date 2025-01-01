@@ -9,37 +9,64 @@
             </button>
             <!-- <a class="navbar-brand page-scroll" href="#page-top">{{site.title}}</a>
             <img src="../img/logo.png" alt="logo" class="navbar-brand page-scroll" href="#page-top" /> -->
-            <a class="navbar-brand page-scroll" href="#page-top">
-                {{site.title}}
-            </a>
+            {% if page.url == "/" %}
+                <a class="navbar-brand page-scroll" href="#page-top">
+                    {{site.title}}
+                </a>
+            {% else %}
+                <a class="navbar-brand page-scroll" href="{{site.baseurl}}/">
+                    {{site.title}}
+                </a>
+            {% endif %}
         </div>
 
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav navbar-right">
-                <li>
-                    <a class="page-scroll" href="#about">About Us</a>
-                </li>
-                <li>
-                    <a class="page-scroll" href="#gallery">Experience</a>
-                </li>
-                <li>
-                    <a class="page-scroll" href="#features">Features</a>
-                </li>
-                <li>
-                    <a class="page-scroll" href="#testimonial">Testimonial</a>
-                </li>
-                <li>
-                    <a class="page-scroll" href="#findus">Location</a>
-                </li>
-                <li>
-                    <a class="page-scroll" href="#contact">Contact</a>
-                </li>
-                <li>
-                    <a class="page-scroll" href="{{site.calendy_url}}" target="_blank">
-                        <i class='bx bx-calendar social-sm'></i>
-                        Book Today
-                    </a>
-                </li>
+                {% if page.url == "/" %}
+                    <li>
+                        <a class="page-scroll" href="#about">About Us</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#gallery">Experience</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#features">Features</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#testimonial">Testimonial</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#findus">Location</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#contact">Contact</a>
+                    </li>
+                {% else %}
+                    <li>
+                        <a class="page-scroll" href="{{site.baseurl}}/#about">About Us</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="{{site.baseurl}}/#gallery">Experience</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="{{site.baseurl}}/#features">Features</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="{{site.baseurl}}/#testimonial">Testimonial</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="{{site.baseurl}}/#findus">Location</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="{{site.baseurl}}/#contact">Contact</a>
+                    </li>
+                {% endif %}
+                    <li>
+                        <a class="page-scroll" href="{{site.calendy_url}}" target="_blank">
+                            <i class='bx bx-calendar social-sm'></i>
+                            Book Today
+                        </a>
+                    </li>
             </ul>
         </div>
     </div>

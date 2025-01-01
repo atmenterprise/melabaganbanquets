@@ -5,7 +5,7 @@ phone_main: +91 90513 12223
 phone_alt: +91 98312 47400
 description: Multi-purpose banquet hall for wedding, receptions, business and other events
 baseurl: "/"
-url: "https://melabaganbanquets.com/"
+url: "https://www.melabaganbanquets.com/"
 include: ["_pages"]
 logo: 'img/logo/'
 
@@ -13,7 +13,7 @@ facebook_url: https://www.facebook.com/profile.php?id=61570893481192
 instagram_url:
 whatsapp_url: https://wa.me/919051312223?text=Hello
 address_url: https://maps.app.goo.gl/6HFwjRgQVPdL7Fxh9
-google_analytics_id:
+google_analytics_id: G-RKT11TWP71
 calendy_url: https://calendly.com/admin-melabaganbanquets/schedule
 formspree_url: https://formspree.io/f/mgvvkeka
 
