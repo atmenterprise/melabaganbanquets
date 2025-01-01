@@ -18,22 +18,27 @@
                     Whether you’re planning a wedding, reception, corporate event, or unique celebration, we’re here to help bring your vision to life.
                     Please fill out our form with your contact info, and our team will get back to you as soon as possible.
                 </p>
-                <hr>
+
                 <p>
-                    <a href="{{site.calendy_url}}" target="_blank" class="btn btn-primary btn-xl">Book a Site Tour</a>
+                    <a href="{{site.calendy_url}}" target="_blank" class="btn btn-primary btn-xl">
+                        <i class='bx bx-calendar social-sm'></i>
+                        Book a Site Tour
+                    </a>
                 </p>
                 <br>
                 <h4 class="lead highlight">Contact Information</h4>
                 <hr>
                 <br>
                 <p class="">
-                    Call or Text: +91 90513 12223 / +91 98312 47400
+                    Call or Text: {{site.phone_main}} / {{site.phone_alt}}
                 </p>
                 <p class="">
                     Email: <a href="mailTo:{{ site.email }}">{{ site.email }}</a>
                 </p>
             </div>
             <div class="contact-column">
+                <h4 class="lead highlight contact-form-title">Contact Form</h4>
+                <hr class="contact-form-title">
                 <form action="{{ site.formspree_url }}" method="POST">
                     <label><h5>Name<span class="text-italic">(required)</span></h5>
                         <input type="text" name="name" placeholder="your first and last name">
