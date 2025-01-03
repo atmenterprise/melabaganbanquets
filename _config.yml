@@ -7,7 +7,7 @@ description: Multi-purpose banquet hall for wedding, receptions, business and ot
 baseurl: "/"
 url: "https://www.melabaganbanquets.com/"
 include: ["_pages"]
-logo: 'img/logo/'
+logo: 'img/logo.png'
 
 facebook_url: https://www.facebook.com/profile.php?id=61570893481192
 instagram_url:

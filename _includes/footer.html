@@ -2,7 +2,9 @@
     <div class="container">
         <h4 class="highlight text-center">{{site.title | upcase}}</h4>
         <h5 class="text-center text-faded">Where luxury meets celebration</h5>
-        <hr class="light">
+        <!-- <hr class="light"> -->
+        <section class="divider"><img src="img/divider.png" alt="divider"></section>
+        
         <div class="row flex-lg-row-reverse text-center">
             <div class="social">
                 <a href="{{ site.facebook_url }}" class="btn" target="_blank" rel="noopener noreferrer">
@@ -27,25 +29,30 @@
             </div>
         </div>
         <br>
+        <br>
         <div class="row text-center">
-            <a href="{{site.url}}/disclaimer" class="text-faded">DISCLAIMER</a> |
-            <a href="{{site.url}}/privacy" class="text-faded">PRIVACY & DATA PROTECTION POLICY</a> |
-            <a href= "{{site.url}}/#contact" class="text-faded">FEEDBACK</a> |
-            <a href= "{{site.url}}/#contact" class="text-faded">COMPLAINTS & ESCALATION</a>
-            <!--<a href="{{site.baseurl}}/onetoonept#faq">FAQs</a> |
-            <a href="#" id="open_preferences_center" class="text-faded">UPDATE COOKIES PREFERENCE</a> -->
+            <div class="footer-grid">
+                <a href="{{site.url}}/disclaimer" class="text-faded">DISCLAIMER</a>
+                <a href="{{site.url}}/privacy" class="text-faded">PRIVACY & DATA PROTECTION POLICY</a>
+                <a href= "{{site.url}}/#contact" class="text-faded">FEEDBACK</a>
+            </div>
+            <div class="footer-grid">
+                <a href= "{{site.url}}/#contact" class="text-faded">COMPLAINTS & ESCALATION</a>
+                <a href="{{site.baseurl}}/#faq" class="text-faded">FAQs</a>
+                <a href="#" id="open_preferences_center" class="text-faded">UPDATE COOKIES PREFERENCE</a>
+            </div>
         </div>
         <hr class="light">
         <br>
         <br>
         <div class="row">
-            <div class="col-md-6">
-                <h6 class="text-muted">
+            <div class="col-md-6 footer-grid">
+                <h6 class="text-light">
                     &copy; COPYRIGHT 2025 <a href="{{site.baseurl}}/" class="text-faded">{{site.title | upcase}}</a>. ALL RIGHTS RESERVED.
                 </h6>
             </div>
-            <div class="col-md-6 text-right">
-                <h6 class="text-muted">
+            <div class="col-md-6 text-right footer-grid">
+                <h6 class="text-light">
                     WEBSITE DESIGNED BY
                     <a href="{{site.developer_webpage}}" target="_blank" rel="noopener noreferrer" class="text-faded">
                         {{site.developer_name | upcase}}
