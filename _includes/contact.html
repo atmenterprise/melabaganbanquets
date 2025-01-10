@@ -1,4 +1,4 @@
-<section class="" id="contact">
+<section class="bg-dark" id="contact">
     <div class="container">
         <div class="row">
             <div class="col-lg-12 text-center">
@@ -34,7 +34,7 @@
                     Call or Text: {{site.phone_main}} / {{site.phone_alt}}
                 </p>
                 <p class="">
-                    Email: <a href="mailTo:{{ site.email }}">{{ site.email }}</a>
+                    Email: <a href="mailTo:{{ site.email }}" class="light">{{ site.email }}</a>
                 </p>
             </div>
             <div class="contact-column">
@@ -53,12 +53,16 @@
                     <label><h5>Your Message</h5>
                         <textarea name="message" placeholder="what's on your mind?"></textarea>
                     </label>
-                    <button type="submit" class="btn btn-primary btn-xl">Submit</button>
+                    <button type="submit" class="btn btn-primary btn-xl">
+                        <i class='bx bx-send social-sm'></i> Submit
+                    </button>
                 </form>
                 <br>
                 <p class="small">
-                    By Clicking on Submit button, you are agreeing to sharing your name, phone and email with Melabagan Banquets.
-                    Read More on our privacy and data protection policies in here.
+                    By Clicking on the Submit button, you are agreeing to sharing your name, phone and email with
+                    {{site.title}}.
+                    Read More on our privacy and data protection policies in
+                    <a href="{{site.url}}/privacy" alt="privacy" class="light">here</a>.
                 </p>
             </div>
         </div>

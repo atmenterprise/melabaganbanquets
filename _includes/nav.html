@@ -10,12 +10,16 @@
             <!-- <a class="navbar-brand page-scroll" href="#page-top">{{site.title}}</a>
             <img src="../img/logo.png" alt="logo" class="navbar-brand page-scroll" href="#page-top" /> -->
             {% if page.url == "/" %}
-                <a class="navbar-brand page-scroll" href="#page-top">
+                <!--<a class="navbar-brand page-scroll" href="#page-top">
                     {{site.title}}
+                </a>-->
+                <a class="navbar-brand page-scroll" href="#page-top">
+                    <img src="img/logo-2.png" alt="logo" class="wow bounceIn nav-brand-img" />
                 </a>
+
             {% else %}
                 <a class="navbar-brand page-scroll" href="{{site.baseurl}}/">
-                    {{site.title}}
+                    <img src="img/logo-2.png" alt="logo" class="wow bounceIn nav-brand-img" />
                 </a>
             {% endif %}
         </div>
@@ -26,8 +30,18 @@
                     <li>
                         <a class="page-scroll" href="#about">About Us</a>
                     </li>
-                    <li>
+                    <!-- <li>
                         <a class="page-scroll" href="#gallery">Experience</a>
+                    </li> -->
+                    <li class="dropdown">
+                        <a href="{{site.baseurl}}/" class="dropdown-toggle page-scroll" data-toggle="dropdown" role="button"
+                           aria-haspopup="true" aria-expanded="false">
+                            Experience <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="{{site.baseurl}}/photogallery" class="page-scroll">Photo Gallery</a></li>
+                            <li><a href="{{site.baseurl}}/videogallery" class="page-scroll">Video Gallery</a></li>
+                        </ul>
                     </li>
                     <li>
                         <a class="page-scroll" href="#features">Features</a>
@@ -45,8 +59,18 @@
                     <li>
                         <a class="page-scroll" href="{{site.baseurl}}/#about">About Us</a>
                     </li>
-                    <li>
+                    <!--<li>
                         <a class="page-scroll" href="{{site.baseurl}}/#gallery">Experience</a>
+                    </li>-->
+                    <li class="dropdown">
+                        <a href="{{site.baseurl}}/#" class="dropdown-toggle page-scroll" data-toggle="dropdown" role="button"
+                           aria-haspopup="true" aria-expanded="false">
+                            Experience <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="{{site.baseurl}}/photogallery" class="page-scroll">Photo Gallery</a></li>
+                            <li><a href="{{site.baseurl}}/videogallery" class="page-scroll">Video Gallery</a></li>
+                        </ul>
                     </li>
                     <li>
                         <a class="page-scroll" href="{{site.baseurl}}/#features">Features</a>
@@ -61,12 +85,27 @@
                         <a class="page-scroll" href="{{site.baseurl}}/#contact">Contact</a>
                     </li>
                 {% endif %}
-                    <li>
+                    <!--<li>
                         <a class="page-scroll" href="{{site.calendy_url}}" target="_blank">
                             <i class='bx bx-calendar social-sm'></i>
                             Book Today
                         </a>
-                    </li>
+                    </li> -->
+                <li class="social-mobile">
+                        <a href="{{ site.facebook_url }}" class="btn" target="_blank" rel="noopener noreferrer">
+                            <i class="bi bi-facebook socialicon-sm"></i>
+                        </a>
+                </li>
+                <li class="social-mobile">
+                    <a href="{{ site.instagram_url }}" class="btn" target="_blank" rel="noopener noreferrer">
+                        <i class="bi bi-instagram socialicon-sm"></i>
+                    </a>
+                </li>
+                <li class="social-mobile">
+                    <a href="{{ site.whatsapp_url }}" class="btn" target="_blank" rel="noopener noreferrer">
+                        <i class="bi bi-whatsapp socialicon-sm"></i>
+                    </a>
+                </li>
             </ul>
         </div>
     </div>
