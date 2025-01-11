@@ -1,7 +1,5 @@
 html,
 body {
-//    padding: 0;
-//    margin: 0;
     height: 100%;
     width: 100%;
 }
@@ -31,7 +29,7 @@ a {
 
 .icon-bar{
     color: $theme-primary-alt !important;
-    }
+}
 
 a.light{
    &:hover,
@@ -62,7 +60,6 @@ p {
 
 .bg-dark {
     background-color: $theme-primary-alt; //#FFFFF7; //$theme-dark;
-
 }
 
 .text-faded {
@@ -86,175 +83,7 @@ aside {
 }
 
 
-// Navigation
-/*
-.navbar-default {
-    //background-color: rgba($theme-primary, 0.8);
-    //border-color: rgba($theme-dark, .8);
-    background-color: transparent;
-    //border-color: rgba($theme-primary, 0.8);
-    border-color: transparent !important;
-    position: absolute;
-    align-items: center;
-    @include sans-serif-font;
-    @include transition-all;
-    .navbar-header .navbar-brand {
-        margin-top: -20px;
-        //color: $theme-primary;
-        color: white;
-        justify: center;
-        @include sans-serif-font;
-        font-weight: 700;
-        text-transform: uppercase;
-        &:hover,
-        &:focus {
-            color: darken(white, 10%);
-        }
-    }
-    .social-mobile{
-        display: block;
-    }
-    .nav {
-        > li {
-            > a,
-            > a:focus {
-                text-transform: uppercase;
-                font-weight: 700;
-                font-size: 12px;
-                //color: $theme-dark;
-                color: white;
-                &:hover {
-                    //color: $theme-primary;
-                    color:  darken($theme-primary-alt, 30%);
-                    text-decoration: underline;
-                }
-            }
-            &.active {
-                > a,
-                > a:focus {
-                    //color: $theme-primary !important;
-                    color: darken(white, 30%) !important;
-                    background-color: transparent;
-                    &:hover {
-                        background-color: transparent;
-                    }
-                }
-            }
-        }
-    }
-    // for the dropdown in navbar
-    .nav {
-        > li {
-            > ul {
-                > li {
-                    > a,`
-                    > a:focus {
-                        text-transform: uppercase;
-                        font-weight: 700;
-                        font-size: 12px;
-                        color: $theme-dark;
-                        &:hover {
-                            color: $theme-primary;
-                        }
-                    }
-                    &.active {
-                        > a,
-                        > a:focus {
-                            color: $theme-primary !important;
-                            background-color: transparent;
-                            &:hover {
-                                background-color: transparent;
-                            }
-                        }
-                    }
-                }
-            }
-        }
-    }
-    @media (max-width: 1024px) {
-        //background-color: transparent;
-        //background-color: rgba($theme-primary, .8);
-        //border-color: rgba($theme-dark, .5);
-        .navbar-header .navbar-brand {
-            //display: none;
-            //background-color: transparent !important;
-            margin-top: -70px;
-            //color: $theme-primary;
-            color: white;
-            justify: center;
-            &:hover,
-            &:focus {
-                color: darken(white, 10%);
-            }
-        }
-        .social-mobile{
-            display: none;
-        }
-        .nav > li > a,
-        .nav > li > a:focus {
-            background-color: $theme-primary; // rgba($theme-primary, .8);
-            color: rgba(white, .7);
-            &:hover {
-                color: white;
-            }
-        }
-        &.affix {
-            background-color: white;
-            border-color: rgba($theme-dark, .5);
-            .navbar-header .navbar-brand {
-                //color: $theme-primary;
-                color: white;
-                font-size: 14px;
-                &:hover,
-                &:focus {
-                    color: darken($theme-primary, 10%);
-                    //color: darken(white, 30%);
-                }
-            }
-            .nav > li > a,
-            .nav > li > a:focus {
-                background-color: $theme-primary;
-                color: $theme-dark;
-                //color: white;
-                &:hover {
-                    color: $theme-primary;
-                    //color: white;
-                }
-            }
-        }
-    // for the dropdown
-        .nav {
-                > li {
-                    > ul {
-                        > li {
-                            > a,`
-                            > a:focus {
-                                text-transform: uppercase;
-                                font-weight: 700;
-                                font-size: 12px;
-                                color: $theme-dark;
-                                &:hover {
-                                    color: $theme-primary;
-                                }
-                            }
-                            &.active {
-                                > a,
-                                > a:focus {
-                                    color: $theme-primary !important;
-                                    background-color: $theme-primary !important; //transparent;
-                                    &:hover {
-                                        background-color: $theme-primary !important; //transparent;
-                                    }
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-    }
-}
-}
-*/
+/* Navigation */
 
 .navbar-default {
     background-color: transparent;
@@ -300,9 +129,9 @@ aside {
 
 @media (max-width: 768px) {
     .navbar-default {
-        background-color: rgba($theme-primary, 0.9); /* Non-transparent background for mobile */
-        position: fixed; /* Fix position for better visibility */
-        border-color: rgba(255, 255, 255, 0.5);
+        background-color: rgba($theme-primary, 0.9);
+        position: fixed;
+        border-color: rgba($theme-primary-alt, 0.5);
     }
 
     .navbar-default .navbar-header .navbar-brand {
@@ -311,20 +140,20 @@ aside {
     }
 
     .navbar-default .navbar-header .navbar-brand img {
-        width: 15%; /* Smaller size for mobile */
+        width: 15%;
     }
 
     .navbar-default .social-mobile {
-          display: none; /* Hide social icons on mobile devices */
+          display: none;
     }
 
     .navbar-default .nav > li > a {
-        background-color: rgba(255, 255, 255, 0.1); /* Optional hover effect */
+        background-color: rgba($theme-primary-alt, 0.1);
         color: white;
     }
 
     .navbar-default.affix {
-        background-color: white;
+        background-color: $theme-primary;
         border-color: rgba($theme-primary-alt, 0.5);
     }
 
@@ -334,12 +163,13 @@ aside {
     }
 
     .navbar-default.affix .nav > li > a {
-        color: black;
+        color: white;
     }
 }
 
 
-// Homepage Header
+/* Homepage Header */
+
 header {
     position: relative;
     width: 100%;
