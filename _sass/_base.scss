@@ -90,10 +90,11 @@ aside {
     border-color: transparent !important;
     position: absolute;
     align-items: center;
+
 }
 
 .navbar-default .navbar-header .navbar-brand {
-    margin-top: -20px;
+    //margin-top: -20px;
     color: white;
     font-weight: 700;
     text-transform: uppercase;
@@ -135,7 +136,7 @@ aside {
     }
 
     .navbar-default .navbar-header .navbar-brand {
-         margin-top: -70px;
+         //margin-top: -70px;
          color: white;
     }
 
@@ -414,6 +415,10 @@ body {
     font-size: 2rem;
 }
 
+.socialicon-sm:hover {
+    color: darken($theme-primary-alt, 20%);
+}
+
 .strong{
     font-weight: bold;
 }
@@ -510,7 +515,9 @@ body {
     justify-content: center;
     align-items: center;
     gap: 20px;
-    //padding: 20px;
+    //margin: 10px;
+    //border: 2px solid red;
+    padding: 10px;
     box-sizing: border-box;
 }
 
@@ -520,6 +527,8 @@ body {
     height: 300px;
     background-size: cover;
     background-position: center;
+    justify-content: center;
+    align-items: center;
     border-radius: 10px;
     overflow: hidden;
     cursor: pointer;
@@ -528,7 +537,12 @@ body {
 
 .gallery-card:hover {
     transform: scale(1.02);
-    //box-shadow: 0px 0px 5px 0 $theme-primary !important;
+    //box-shadow: 0px 0px 5px 0 $theme-primary-alt !important;
+    //color: darken($theme-primary-alt, 20%);
+}
+
+.gallery-icon:hover > i{
+    color: darken($theme-primary-alt, 20%);
 }
 
 .gallery-card::after {
@@ -582,13 +596,16 @@ body {
 
 @media (max-width: 768px) {
    .gallery-card {
-       width: 90%;
-       height: 180px;
+       //gap: 0px;
+       width: 100%;
+       height: 150px;
    }
 }
 
 @media (max-width: 480px) {
     .gallery-card {
+        //gap: 0px;
+        width: 100%;
         height: 150px;
     }
 
@@ -703,26 +720,27 @@ body {
 }
 
 
-/* feedback carousel */
+/* feedback carousel
 
 .testimonial-container {
-    box-sizing: border-box;
+    //box-sizing: border-box;
     //height: 100vh;
     width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    //display: flex;
+    //align-items: center;
+    //justify-content: center;
+    border: 1px solid red;
     //background-color: #e3f2fd;
 }
-
+*/
 .testimonial {
-    position: relative;
-    max-width: 900px;
+    //position: relative;
+    //max-width: 900px;
     width: 100%;
-    padding: 50px 0;
-    overflow: hidden;
+    //padding: 50px 0;
+    //overflow: hidden;
 }
-
+/*
 .testimonial-content{
     //border: 2px solid red;
     padding-top: 10px;
@@ -764,8 +782,8 @@ body {
     font-weight: 600;
     color: black;
 }
-
-/* swiper button css */
+*/
+/* swiper button css
 .swipper-nav-btn {
     height: 40px;
     width: 40px;
@@ -803,7 +821,7 @@ body {
       display: none;
   }
 }
-
+*/
 
 /* Find us section */
 
@@ -1050,12 +1068,22 @@ iframe {
 
 .footer-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 3fr));
+    grid-template-columns: repeat(3, 1fr);
     gap: 10px;
     padding: 5px;
     //border: 2px solid blue;
     text-align: center;
     align-items: center;
+}
+
+.footer-grid ul {
+    list-style: none; /* Remove list decorations */
+    display: contents;
+}
+
+.footer-grid li {
+    display: inline;
+    //margin: 5px 0; /* Optional: Add space between items */
 }
 
 .footer-grid a {
@@ -1064,6 +1092,27 @@ iframe {
 
 .footer-grid a:last-child {
     border-right: none;
+}
+
+.footer-grid a:hover{
+    text-decoration: underline;
+    color: darken($theme-primary-alt, 20%);
+}
+
+.footer-grid-credit a:hover{
+    text-decoration: underline;
+    color: darken($theme-primary-alt, 20%);
+}
+
+@media(max-width: 768px){
+    .footer-grid a {
+        border-right: none;
+        font-size: 10px;
+    }
+
+    .footer-grid a:last-child {
+        border-right: none;
+    }
 }
 
 /* divider */
@@ -1136,4 +1185,29 @@ iframe {
         width: 100%;
     }
 
+}
+
+/* Pag Scroll */
+.scroll-container {
+    position: fixed;
+    bottom: 50px;
+    right: 20%;
+    transform: translateX(-50%);
+    text-align: center;
+    cursor: pointer;
+}
+
+.scroll-container img {
+    width: 50px;
+    height: 50px;
+    animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
 }
