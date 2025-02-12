@@ -1171,6 +1171,38 @@ iframe {
 }
 
 
+.photo-gallery-container .popup-image {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(0,0,0,.9);
+    height: 100%;
+    width: 100%;
+    z-index: 1000;
+    display: none;
+}
+
+.photo-gallery-container .popup-image span{
+    position: absolute;
+    top: 70px;
+    right: 250px;
+    font-size: 40px;
+    font-weight: bolder;
+    color: rgba(white, .5);
+    cursor: pointer;
+}
+
+.photo-gallery-container .popup-image img{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 1px solid white;
+    border-radius: 5px;
+    width: 800px;
+    object-fit: cover;
+}
+
 @media(max-width: 768px){
      .photo-gallery-row {
         flex-direction: column;
@@ -1182,6 +1214,10 @@ iframe {
         flex-wrap: wrap;
         gap: 10px;
         width: 100%;
+    }
+
+    .photo-gallery-container .popup-image img{
+        width: 95%;
     }
 
 }
