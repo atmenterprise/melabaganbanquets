@@ -723,22 +723,21 @@ body {
 /* feedback carousel */
 
 .testimonial-container {
-    //box-sizing: border-box;
+    box-sizing: border-box;
     //height: 100vh;
     width: 100%;
-    //display: flex;
-    //align-items: center;
-    //justify-content: center;
-    border: 1px solid red;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     //background-color: #e3f2fd;
 }
 
 .testimonial {
-    //position: relative;
-    //max-width: 900px;
+    position: relative;
+    max-width: 900px;
     width: 100%;
-    //padding: 50px 0;
-    //overflow: hidden;
+    padding: 50px 0;
+    overflow: hidden;
 }
 
 .testimonial-content{
@@ -802,7 +801,7 @@ body {
 .swipper-nav-btn::before {
     font-size: 20px;
     //color: white;
-    color: #25373D;
+    color: $theme-primary;
 }
 
 .swiper-pagination-bullet {

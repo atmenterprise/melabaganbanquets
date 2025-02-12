@@ -9,62 +9,38 @@
             </div>
         </div>
     </div>
-    <!--<div class="container">
-            <div class="testimonial tagembed-widget"
-                 style="width:100%;height:100%;"
-                 data-widget-id="2147080"
-                 data-tags="false"
-                 view-url="https://widget.tagembed.com/2147080">
-            </div>
-    </div>-->
-
+    <div class="testimonial-container">
         <div class="testimonial swiper mySwiper">
             <div class="testimonial-content swiper-wrapper">
+                {% for t in site.data.reviews %}
                 <div class="slide swiper-slide">
                     <p class="">
-                        ⭐A Perfect Venue for Memorable Celebrations.
-
-                        💐Melabagan Banquet Hall stands out as an excellent venue for hosting a wide range of events, from weddings and receptions to corporate gatherings and private parties. Here's what makes it exceptional .
-
-                        🙏 The hall is spacious enough to accommodate a large number of guests comfortably.
-                        Whether you’re planning an intimate gathering or a grand celebration,
-
-                        💯 The staff at Melabagan Banquet Hall are professional, attentive, and courteous. From event planning to execution, they go above and beyond to ensure everything runs smoothly, making your experience stress-free.
+                        {{t.testimonial.description}}
                     </p>
                     <i class="bx bxs-quote-left quote-icon"></i>
                     <div class="slide-details">
-                        <span>Himanshu Pandey</span>
+                        <span>
+                            {{t.testimonial.author}}
+                        </span>
                     </div>
                 </div>
-                <div class="slide swiper-slide">
-                    <p class="">
-                        I recently hosted a family celebration at Melabagan Banquet Hall, and it was a wonderful experience from start to finish. The venue is spacious and beautifully decorated, offering a great mix of modern amenities with an elegant, welcoming atmosphere.
-                    </p>
-                    <i class="bx bxs-quote-left quote-icon"></i>
-                    <div class="slide-details">
-                        <span>Sourav Poddar</span>
-                    </div>
-                </div>
-                <div class="slide swiper-slide">
-                    <p class="">
-                        One of the spacious and very big banquet and lawn(approx 8000sqft ) First time in Dum Dum road, best thing is that it was fully in ground floor very good for senior citizens how can't walk on stairs. And we know that parents get much tired to manage the guest from one floor to another but here the best thing is that the parents can fully cordinate and manage the guests because everything is in ground floor and last not the least very important is the parking Melabagan banquet have their own parking area...
-
-                        Thank you
-                        To the owner of
-                        Melabagan banquet
-
-                        For providing us such a beautiful and spacious banquet in Dum Dum road
-                    </p>
-                    <i class="bx bxs-quote-left quote-icon"></i>
-                    <div class="slide-details">
-                        <span>Rakesh Gupta</span>
-                    </div>
-                </div>
+                {% endfor %}
             </div>
-            <!-- swiper navigation
-            <div class="swiper-button-next swipper-nav-btn"></div>
-            <div class="swiper-button-prev swipper-nav-btn"></div>-->
-            <!-- pagination
-            <div class="swiper-pagination"></div>-->
 
+            <!-- swiper navigation -->
+            <div class="swiper-button-next swipper-nav-btn"></div>
+            <div class="swiper-button-prev swipper-nav-btn"></div>
+            <!-- pagination -->
+            <div class="swiper-pagination"></div>
+
+        </div>
+    </div>
+
+    <div class="container">
+        <h4 class="text-center">
+            <a href="{{ site.google_reviews_url }}" target="_blank" class="btn btn-primary btn-sm page-scroll">
+                <i class='bi bi-google social-sm'></i> Check out more reviews
+            </a>
+        </h4>
+    </div>
 </section>
