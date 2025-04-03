@@ -90,7 +90,6 @@ aside {
     border-color: transparent !important;
     position: absolute;
     align-items: center;
-
 }
 
 .navbar-default .navbar-header .navbar-brand {
@@ -107,7 +106,7 @@ aside {
 
 .navbar-default .navbar-header .navbar-brand img {
     width: 25%; /* Default size */
-    padding: 2px;
+    //padding: 2px;
 }
 
 .navbar-default .nav > li > a {
@@ -127,47 +126,62 @@ aside {
     color: darken($theme-primary-alt, 20%);
 }
 
-
 @media (max-width: 768px) {
     .navbar-default {
-        background-color: rgba($theme-primary, 0.9);
+        background-color: transparent;
         position: fixed;
-        border-color: rgba($theme-primary-alt, 0.5);
     }
 
     .navbar-default .navbar-header .navbar-brand {
-         //margin-top: -70px;
+         margin-top: -65px;
+         margin-left: -15px;
          color: white;
     }
 
+    .navbar-default .navbar-collapse{
+        //border: 2px solid black !important;
+        background-color: $theme-primary;
+        overflow-y: none;
+        overflow-x: none;
+        overflow-y: hidden;
+    }
+
+    .navbar-default .navbar-collapse{
+        border: 1px solid $theme-primary !important;
+        background-color: rgba($theme-primary, 0.8) !important;
+        //background-color: transparent !important;
+        height: 100%;
+    }
+
+    .navbar-default .navbar-collapse > ul > li {
+        //border: 2px solid black !important;
+        //background-color: $theme-primary !important;
+        text-align: right;
+        padding: 3px;
+        height: 100%;
+    }
+
     .navbar-default .navbar-header .navbar-brand img {
-        width: 15%;
+        width: 25%;
     }
 
     .navbar-default .social-mobile {
-          display: none;
+          display: inline-block;
+          vertical-align: top;
+          width: 20%;
+          float: right;
     }
 
-    .navbar-default .nav > li > a {
-        background-color: rgba($theme-primary-alt, 0.1);
-        color: white;
-    }
-
-    .navbar-default.affix {
-        background-color: $theme-primary;
-        border-color: rgba($theme-primary-alt, 0.5);
-    }
-
-    .navbar-default.affix .navbar-header .navbar-brand {
-        color: black;
-        font-size: 14px;
-    }
-
-    .navbar-default.affix .nav > li > a {
-        color: white;
-    }
 }
 
+
+@media (max-width: 1200px) {
+    .navbar-default .navbar-collapse > ul{
+        //border: 1px solid $theme-primary !important;
+        margin-top: -40px;
+    }
+
+}
 
 /* Homepage Header */
 
