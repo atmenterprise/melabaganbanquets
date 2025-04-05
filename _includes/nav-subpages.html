@@ -16,39 +16,9 @@
 
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav navbar-right">
-                {% if page.url == "/" %}
                 <li>
-                    <a class="page-scroll" href="#about">About Us</a>
+                    <a class="page-scroll" href="{{site.baseurl}}/">Home</a>
                 </li>
-                <!-- <li>
-                    <a class="page-scroll" href="#gallery">Experience</a>
-                </li> -->
-                <li class="dropdown">
-                    <a href="{{site.baseurl}}/" class="dropdown-toggle page-scroll" data-toggle="dropdown" role="button"
-                       aria-haspopup="true" aria-expanded="false">
-                        Experience <span class="caret"></span>
-                    </a>
-                    <ul class="dropdown-menu">
-                        <li><a href="{{site.baseurl}}/photogallery" class="page-scroll">Photo Gallery</a></li>
-                        <li><a href="{{site.baseurl}}/videogallery" class="page-scroll">Video Gallery</a></li>
-                    </ul>
-                </li>
-                <li>
-                    <a class="page-scroll" href="#features">Features</a>
-                </li>
-                <li>
-                    <a class="page-scroll" href="#testimonial">Testimonial</a>
-                </li>
-                <li>
-                    <a class="page-scroll" href="#findus">Location</a>
-                </li>
-                <li>
-                    <a class="page-scroll" href="#contact">Contact</a>
-                </li>
-                <!--<li class="hidden">
-                    <a class="page-scroll" href="{{site.calendy_url}}">Book a Visit</a>
-                </li>-->
-                {% else %}
                 <li>
                     <a class="page-scroll" href="{{site.baseurl}}/#about">About Us</a>
                 </li>
@@ -61,8 +31,8 @@
                         Experience <span class="caret"></span>
                     </a>
                     <ul class="dropdown-menu">
-                        <li><a href="{{site.baseurl}}/photogallery" class="page-scroll">Photo Gallery</a></li>
-                        <li><a href="{{site.baseurl}}/videogallery" class="page-scroll">Video Gallery</a></li>
+                        <li><a href="{{site.baseurl}}/photogallery" class="page-scroll dropdown-text">Photo Gallery</a></li>
+                        <li><a href="{{site.baseurl}}/videogallery" class="page-scroll dropdown-text">Video Gallery</a></li>
                     </ul>
                 </li>
                 <li>
@@ -77,10 +47,6 @@
                 <li>
                     <a class="page-scroll" href="{{site.baseurl}}/#contact">Contact</a>
                 </li>
-                <!--<li class="hidden">
-                    <a class="page-scroll" href="{{site.calendy_url}}">Book a Visit</a>
-                </li>-->
-                {% endif %}
 
                 <li class="social-mobile">
                     <a href="{{ site.facebook_url }}" class="btn" target="_blank" rel="noopener noreferrer">
