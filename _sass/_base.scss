@@ -172,6 +172,17 @@ aside {
           float: center;
     }
 
+    .nav-subpage-img img{
+        width: 12% !important;
+        margin: 2px;
+    }
+}
+
+@media (min-width: 1024px){
+    .nav-subpage-img img{
+        width: 10% !important;
+        margin: -15px;
+    }
 }
 
 
