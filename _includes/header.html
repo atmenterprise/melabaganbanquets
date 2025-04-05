@@ -3,7 +3,6 @@
         <div class="header-content-inner">
             <div class="header-content-row">
                <div class="header-content-col">
-                   <!--<h1><img src="img/logo-2.png" alt="logo" class="wow bounceIn" style="width: 40%;" /></h1> -->
                    <h1 class="wow slideInDown">Melabagan Banquets</h1>
                    <h2 class="brand-subtext-highlight wow slideInLeft" data-wow-duration="1s" data-wow-delay="0.2s">
                        <i>... where luxury meets celebration</i>
@@ -14,20 +13,32 @@
                    </h4>
                    <br>
                    <section class="divider"><img src="img/divider.png" alt="divider"></section>
-                   <a href="{{site.calendy_url}}" target="_blank" class="btn btn-primary btn-xl page-scroll">
+                   <!--<a href="{{site.calendy_url}}" target="_blank" class="btn btn-primary btn-xl page-scroll booknow-btn">
                        <i class='bx bx-calendar social-sm'></i> BOOK TODAY
+                   </a>-->
+                   <a href="tel:{{site.phone_main}}" target="_blank" class="btn btn-primary btn-md page-scroll booknow-btn">
+                       <i class='bx bxs-phone-call socialicon-sm'>
+                           <span class="socialicon-sm-text strong">{{site.phone_main}} / {{site.phone_alt}}</span>
+                       </i>
                    </a>
                    <br>
-                   <br>
-                   <a href="tel:{{site.phone_main}}" class="btn social-btn" target="_blank" rel="noopener noreferrer">
+                   <!--<a href="tel:{{site.phone_main}}" class="btn social-btn" target="_blank" rel="noopener noreferrer">
                        <i class='bx bxs-phone-call socialicon-sm'></i>
                    </a>
-                   {{site.phone_main}} / {{site.phone_alt}}
-                   <br>
-                   <a href="mailTo:{{site.email}}" class="btn social-btn" target="_blank" rel="noopener noreferrer">
-                       <i class='bx bx-envelope socialicon-sm'></i>
+                   {{site.phone_main}} / {{site.phone_alt}} -->
+                   <a href="mailTo:{{site.email}}" class="btn social-btn socialicon-xsm" target="_blank" rel="noopener noreferrer">
+                       <i class='bx bx-envelope socialicon-sm'>
+                           <span class="socialicon-sm-text">{{site.email}}</span>
+                       </i>
                    </a>
-                   {{site.email}}
+                   <br>
+                   <a href="{{site.calendy_url}}" class="btn social-btn socialicon-xsm" target="_blank" rel="noopener noreferrer">
+                       <i class='bx bx-calendar socialicon-sm'>
+                           <span class="socialicon-sm-text">BOOK A TOUR</span>
+                       </i>
+                   </a>
+                   <br>
+
                 </div>
 
                 <div class="header-content-col header-video">

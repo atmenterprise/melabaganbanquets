@@ -126,6 +126,10 @@ aside {
     color: darken($theme-primary-alt, 20%);
 }
 
+.hidden{
+    display: none;
+}
+
 @media (max-width: 768px) {
     .navbar-default {
         position: fixed;
@@ -171,13 +175,6 @@ aside {
 }
 
 
-@media (min-width: 1024px) {
-    .navbar-default .navbar-collapse > ul{
-        //border: 1px solid $theme-primary !important;
-        margin-top: -0px;
-    }
-
-}
 
 /* Homepage Header
 
@@ -331,10 +328,11 @@ header {
       width: 100%;
       min-height: auto;
       background-position: center;
+      @include background-cover;
       background-size: cover;
       background-image: linear-gradient(rgba($theme-primary,0.1), rgba($theme-primary,0.5)), url('../img/background-header.jpg');
       color: white;
-    }
+}
 
 .header-content {
       position: relative;
@@ -351,41 +349,44 @@ header {
       text-align: center;
 }
 
-    .header-content-inner h1 {
+.header-content-inner h1 {
       font-weight: 700;
       text-transform: uppercase;
       margin-top: 0;
       margin-bottom: 0;
-    }
+}
 
-    .header-content-inner hr {
+.header-content-inner hr {
       margin: 30px auto;
-    }
+}
 
-    .header-content-inner p {
+.header-content-inner p {
       font-weight: 300;
       color: rgba(255, 255, 255, 0.7);
       font-size: 16px;
       margin-bottom: 50px;
-    }
+}
 
-    .header-content-row {
+.header-content-row {
       display: flex;
       flex-wrap: wrap;
       align-items: center;
       justify-content: center;
-    }
+}
 
-    .header-content-col {
+.header-content-col {
       flex: 1 1 100%;
       max-width: 100%;
       padding: 10px;
-    }
+      //border: 1px solid white;
+      //margin-top: 40px;
+}
 
 @media (min-width: 768px) {
     .header-content-col {
         flex: 1 1 50%;
         max-width: 50%;
+        margin-top: 10px !important;
     }
 
     .header-content-inner p {
@@ -426,7 +427,12 @@ header {
     color: white;
     padding: 5px 10px;
     text-decoration: none;
-    border: 1px solid white;
+    border: 1px solid white !important;
+    box-shadow: 0px 0px 5px 0 $theme-primary-alt !important;
+}
+
+.booknow-btn{
+    border: 1px solid white !important;
     box-shadow: 0px 0px 5px 0 $theme-primary-alt !important;
 }
 
@@ -540,6 +546,24 @@ body {
 .socialicon-sm:hover {
     color: darken($theme-primary-alt, 20%);
 }
+
+.socialicon-xsm{
+    color: white;
+    text-transform: none;
+    font-size: 1.5rem;
+    border: 1px solid white;
+    margin: 5px;
+    text-align: center;
+}
+
+.socialicon-xsm:hover {
+    color: darken($theme-primary-alt, 20%);
+}
+
+.socialicon-sm-text{
+    font-size: 1.5rem;
+}
+
 
 .strong{
     font-weight: bold;
