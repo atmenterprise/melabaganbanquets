@@ -100,6 +100,10 @@ export default function Footer() {
               <i className="bi bi-envelope-fill"></i>
               <a href={`mailto:${siteConfig.email}`}>{siteConfig.email}</a>
             </p>
+            <p className="footer-contact-item">
+              <i className="bi bi-calendar-check-fill"></i>
+              <a href={siteConfig.calendy_url} target="_blank" rel="noopener noreferrer">Book Site Tour</a>
+            </p>
             
             <div className="footer-social-icons">
               <a href={siteConfig.facebook_url} className="social-btn" target="_blank" rel="noopener noreferrer" aria-label="Facebook">

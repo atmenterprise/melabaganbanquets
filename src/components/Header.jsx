@@ -27,10 +27,11 @@ export default function Header() {
             {/* Left Column: Glass Card Info */}
             <div className="header-content-col">
               <div className="header-glass-card wow slideInLeft">
+                <div className="header-logo-container">
+                  <img src="/img/logo-2.png" alt="Melabagan Banquets Logo" className="header-logo" />
+                </div>
                 <h1 className="header-title">Melabagan Banquets</h1>
-                <h2 className="brand-subtext-highlight">
-                  <i>... where luxury meets celebration</i>
-                </h2>
+                <h2 className="header-subtitle">where luxury meets celebration</h2>
                 <h4 className="brand-description">
                   A brand new banquet hall in the heart of Dum Dum, Kolkata. <br />
                   Come and Celebrate <span className={`change-text-loop ${fadeClass}`}>{celebrationTypes[currentWordIndex]}</span> with us.
@@ -50,12 +51,6 @@ export default function Header() {
                   <a href={`mailto:${siteConfig.email}`} className="btn btn-header-secondary socialicon-xsm" target="_blank" rel="noopener noreferrer">
                     <i className="bx bx-envelope socialicon-sm">
                       <span className="socialicon-sm-text"> {siteConfig.email}</span>
-                    </i>
-                  </a>
-                  
-                  <a href={siteConfig.calendy_url} className="btn btn-header-secondary socialicon-xsm" target="_blank" rel="noopener noreferrer">
-                    <i className="bx bx-calendar socialicon-sm">
-                      <span className="socialicon-sm-text"> BOOK A TOUR</span>
                     </i>
                   </a>
                 </div>

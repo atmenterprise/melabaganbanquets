@@ -9,6 +9,7 @@ import PhotoGallery from './pages/PhotoGallery';
 import VideoGallery from './pages/VideoGallery';
 import { ModalProvider } from './context/ModalContext';
 import InfoModal from './components/InfoModal';
+import ChatBox from './components/ChatBox';
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
         </Routes>
         <Footer />
         <InfoModal />
+        <ChatBox />
       </Router>
     </ModalProvider>
   );

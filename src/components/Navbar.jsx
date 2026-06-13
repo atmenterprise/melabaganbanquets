@@ -39,13 +39,26 @@ export default function Navbar() {
     setIsDropdownOpen(false);
   };
 
+  // Helper for smooth scrolling on home page
+  const handleHashLink = (e, hash) => {
+    if (isHome) {
+      e.preventDefault();
+      const element = document.querySelector(hash);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
+      closeMenu();
+    } else {
+      closeMenu();
+    }
+  };
+
   // Determine navbar classes
-  // Home page has navbar-home class, subpages have navbar-subpage class. Affix is added on scroll.
   const navClass = `navbar navbar-default navbar-fixed-top ${isHome ? 'navbar-home' : 'navbar-subpage'} ${isAffixed ? 'affix' : ''}`;
 
   return (
     <nav id="mainNav" className={navClass}>
-      <div className="container-fluid">
+      <div className="container">
         <div className="navbar-header">
           <button
             type="button"
@@ -60,7 +73,7 @@ export default function Navbar() {
           </button>
           
           <Link className="navbar-brand page-scroll" to="/" onClick={closeMenu}>
-            <img src="/img/logo-2.png" alt="logo" className="wow bounceIn nav-brand-img" />
+            <span className="nav-brand-text">Melabagan Banquets</span>
           </Link>
         </div>
 
@@ -69,7 +82,10 @@ export default function Navbar() {
             {isHome ? (
               <>
                 <li>
-                  <a className="page-scroll" href="#about" onClick={closeMenu}>About Us</a>
+                  <a className="page-scroll" href="#about" onClick={(e) => handleHashLink(e, '#about')}>About Us</a>
+                </li>
+                <li>
+                  <a className="page-scroll" href="#features" onClick={(e) => handleHashLink(e, '#features')}>Features</a>
                 </li>
                 <li className={`dropdown ${isDropdownOpen ? 'open' : ''}`}>
                   <a
@@ -96,19 +112,18 @@ export default function Navbar() {
                         Video Gallery
                       </Link>
                     </li>
+                    <li>
+                      <a href="#testimonial" className="page-scroll dropdown-text" onClick={(e) => handleHashLink(e, '#testimonial')}>
+                        Guest Reviews
+                      </a>
+                    </li>
                   </ul>
                 </li>
                 <li>
-                  <a className="page-scroll" href="#features" onClick={closeMenu}>Features</a>
+                  <a className="page-scroll" href="#findus" onClick={(e) => handleHashLink(e, '#findus')}>Location</a>
                 </li>
-                <li>
-                  <a className="page-scroll" href="#testimonial" onClick={closeMenu}>Testimonial</a>
-                </li>
-                <li>
-                  <a className="page-scroll" href="#findus" onClick={closeMenu}>Location</a>
-                </li>
-                <li>
-                  <a className="page-scroll" href="#contact" onClick={closeMenu}>Contact</a>
+                <li className="nav-cta-item">
+                  <a href="#contact" className="btn nav-cta-btn" onClick={(e) => handleHashLink(e, '#contact')}>Plan Your Event</a>
                 </li>
               </>
             ) : (
@@ -119,6 +134,9 @@ export default function Navbar() {
                 <li>
                   <Link className="page-scroll" to="/#about" onClick={closeMenu}>About Us</Link>
                 </li>
+                <li>
+                  <Link className="page-scroll" to="/#features" onClick={closeMenu}>Features</Link>
+                </li>
                 <li className={`dropdown ${isDropdownOpen ? 'open' : ''}`}>
                   <a
                     href="#"
@@ -144,19 +162,18 @@ export default function Navbar() {
                         Video Gallery
                       </Link>
                     </li>
+                    <li>
+                      <Link to="/#testimonial" className="page-scroll dropdown-text" onClick={closeMenu}>
+                        Guest Reviews
+                      </Link>
+                    </li>
                   </ul>
-                </li>
-                <li>
-                  <Link className="page-scroll" to="/#features" onClick={closeMenu}>Features</Link>
-                </li>
-                <li>
-                  <Link className="page-scroll" to="/#testimonial" onClick={closeMenu}>Testimonial</Link>
                 </li>
                 <li>
                   <Link className="page-scroll" to="/#findus" onClick={closeMenu}>Location</Link>
                 </li>
-                <li>
-                  <Link className="page-scroll" to="/#contact" onClick={closeMenu}>Contact</Link>
+                <li className="nav-cta-item">
+                  <Link to="/#contact" className="btn nav-cta-btn" onClick={closeMenu}>Plan Your Event</Link>
                 </li>
               </>
             )}
