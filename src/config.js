@@ -1,0 +1,20 @@
+export const siteConfig = {
+  title: "Melabagan Banquets",
+  email: "enquiry@melabaganbanquets.com",
+  phone_main: "+91 90513 12223",
+  phone_alt: "+91 98312 47400",
+  description: "Multi-purpose banquet hall for wedding, receptions, business and other events",
+  baseurl: "/",
+  url: "https://www.melabaganbanquets.com/",
+  logo: "img/logo.png",
+  facebook_url: "https://www.facebook.com/profile.php?id=61570893481192",
+  instagram_url: "https://www.instagram.com/melabaganbanquets",
+  whatsapp_url: "https://wa.me/919051312223?text=Hello",
+  address_url: "https://maps.app.goo.gl/6HFwjRgQVPdL7Fxh9",
+  google_reviews_url: "https://g.co/kgs/hPcd9Ke",
+  google_analytics_id: "G-RKT11TWP71",
+  calendy_url: "https://calendly.com/admin-melabaganbanquets/schedule",
+  formspree_url: "https://formspree.io/f/mgvvkeka",
+  developer_name: "ATM Enterprise",
+  developer_webpage: "https://linktr.ee/atmenterprise"
+};
