@@ -113,7 +113,7 @@ aside {
 }
 
 .navbar-default .nav > li > a:hover {
-  text-decoration: underline;
+  text-decoration: none;
   color: rgb(255, 221.4, 143);
 }
 
@@ -1197,12 +1197,12 @@ iframe {
 }
 
 .footer-grid a:hover {
-  text-decoration: underline;
+  text-decoration: none;
   color: rgb(255, 221.4, 143);
 }
 
 .footer-grid-credit a:hover {
-  text-decoration: underline;
+  text-decoration: none;
   color: rgb(255, 221.4, 143);
 }
 

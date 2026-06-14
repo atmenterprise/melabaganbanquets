@@ -38,6 +38,18 @@ export default function Navbar() {
     return () => document.removeEventListener('click', handleDocumentClick);
   }, []);
 
+  // Lock body scroll when mobile menu overlay is open
+  useEffect(() => {
+    if (isOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = '';
+    }
+    return () => {
+      document.body.style.overflow = '';
+    };
+  }, [isOpen]);
+
   // Sync selected language state with Google Translate cookies on mount
   useEffect(() => {
     const getTranslateCookie = () => {
@@ -94,7 +106,7 @@ export default function Navbar() {
   };
 
   // Determine navbar classes
-  const navClass = `navbar navbar-default navbar-fixed-top navbar-home ${isAffixed ? 'affix' : ''}`;
+  const navClass = `navbar navbar-default navbar-fixed-top navbar-home ${isAffixed ? 'affix' : ''} ${isOpen ? 'menu-open' : ''}`;
 
   return (
     <nav id="mainNav" className={navClass}>
@@ -205,9 +217,6 @@ export default function Navbar() {
               </>
             ) : (
               <>
-                <li>
-                  <Link className="page-scroll" to="/" onClick={closeMenu}>Home</Link>
-                </li>
                 <li>
                   <Link className="page-scroll" to="/#about" onClick={closeMenu}>About Us</Link>
                 </li>
