@@ -6,6 +6,8 @@ export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [isAffixed, setIsAffixed] = useState(false);
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+  const [isLangDropdownOpen, setIsLangDropdownOpen] = useState(false);
+  const [selectedLang, setSelectedLang] = useState('en');
   const location = useLocation();
   const isHome = location.pathname === '/';
 
@@ -28,15 +30,53 @@ export default function Navbar() {
       if (!e.target.closest('.dropdown')) {
         setIsDropdownOpen(false);
       }
+      if (!e.target.closest('.lang-dropdown')) {
+        setIsLangDropdownOpen(false);
+      }
     };
     document.addEventListener('click', handleDocumentClick);
     return () => document.removeEventListener('click', handleDocumentClick);
   }, []);
 
+  // Sync selected language state with Google Translate cookies on mount
+  useEffect(() => {
+    const getTranslateCookie = () => {
+      const value = `; ${document.cookie}`;
+      const parts = value.split(`; googtrans=`);
+      if (parts.length === 2) {
+        const cookieVal = parts.pop().split(';').shift();
+        const lang = cookieVal.split('/').pop();
+        if (['en', 'hi', 'bn'].includes(lang)) {
+          return lang;
+        }
+      }
+      return 'en';
+    };
+
+    const timer = setTimeout(() => {
+      const lang = getTranslateCookie();
+      setSelectedLang(lang);
+    }, 1000);
+
+    return () => clearTimeout(timer);
+  }, []);
+
+  const handleLangChange = (langCode) => {
+    setSelectedLang(langCode);
+    setIsLangDropdownOpen(false);
+    
+    const selectEl = document.querySelector('.goog-te-combo');
+    if (selectEl) {
+      selectEl.value = langCode;
+      selectEl.dispatchEvent(new Event('change'));
+    }
+  };
+
   const toggleMenu = () => setIsOpen(!isOpen);
   const closeMenu = () => {
     setIsOpen(false);
     setIsDropdownOpen(false);
+    setIsLangDropdownOpen(false);
   };
 
   // Helper for smooth scrolling on home page
@@ -54,7 +94,7 @@ export default function Navbar() {
   };
 
   // Determine navbar classes
-  const navClass = `navbar navbar-default navbar-fixed-top ${isHome ? 'navbar-home' : 'navbar-subpage'} ${isAffixed ? 'affix' : ''}`;
+  const navClass = `navbar navbar-default navbar-fixed-top navbar-home ${isAffixed ? 'affix' : ''}`;
 
   return (
     <nav id="mainNav" className={navClass}>
@@ -122,6 +162,43 @@ export default function Navbar() {
                 <li>
                   <a className="page-scroll" href="#findus" onClick={(e) => handleHashLink(e, '#findus')}>Location</a>
                 </li>
+                <li className={`dropdown lang-dropdown ${isLangDropdownOpen ? 'open' : ''}`}>
+                  <a
+                    href="#"
+                    className="dropdown-toggle lang-dropdown-toggle"
+                    onClick={(e) => {
+                      e.preventDefault();
+                      setIsLangDropdownOpen(!isLangDropdownOpen);
+                      setIsDropdownOpen(false);
+                    }}
+                    role="button"
+                    aria-haspopup="true"
+                    aria-expanded={isLangDropdownOpen}
+                  >
+                    <i className="bi bi-globe nav-lang-icon"></i>{' '}
+                    <span className="lang-text-label">
+                      {selectedLang === 'en' ? 'English' : selectedLang === 'hi' ? 'हिंदी' : 'বাংলা'}
+                    </span>{' '}
+                    <span className="caret"></span>
+                  </a>
+                  <ul className="dropdown-menu lang-menu">
+                    <li>
+                      <a href="#" className="dropdown-text" onClick={(e) => { e.preventDefault(); handleLangChange('en'); }}>
+                        English
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#" className="dropdown-text" onClick={(e) => { e.preventDefault(); handleLangChange('hi'); }}>
+                        हिंदी (Hindi)
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#" className="dropdown-text" onClick={(e) => { e.preventDefault(); handleLangChange('bn'); }}>
+                        বাংলা (Bengali)
+                      </a>
+                    </li>
+                  </ul>
+                </li>
                 <li className="nav-cta-item">
                   <a href="#contact" className="btn nav-cta-btn" onClick={(e) => handleHashLink(e, '#contact')}>Plan Your Event</a>
                 </li>
@@ -171,6 +248,43 @@ export default function Navbar() {
                 </li>
                 <li>
                   <Link className="page-scroll" to="/#findus" onClick={closeMenu}>Location</Link>
+                </li>
+                <li className={`dropdown lang-dropdown ${isLangDropdownOpen ? 'open' : ''}`}>
+                  <a
+                    href="#"
+                    className="dropdown-toggle lang-dropdown-toggle"
+                    onClick={(e) => {
+                      e.preventDefault();
+                      setIsLangDropdownOpen(!isLangDropdownOpen);
+                      setIsDropdownOpen(false);
+                    }}
+                    role="button"
+                    aria-haspopup="true"
+                    aria-expanded={isLangDropdownOpen}
+                  >
+                    <i className="bi bi-globe nav-lang-icon"></i>{' '}
+                    <span className="lang-text-label">
+                      {selectedLang === 'en' ? 'English' : selectedLang === 'hi' ? 'हिंदी' : 'বাংলা'}
+                    </span>{' '}
+                    <span className="caret"></span>
+                  </a>
+                  <ul className="dropdown-menu lang-menu">
+                    <li>
+                      <a href="#" className="dropdown-text" onClick={(e) => { e.preventDefault(); handleLangChange('en'); }}>
+                        English
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#" className="dropdown-text" onClick={(e) => { e.preventDefault(); handleLangChange('hi'); }}>
+                        हिंदी (Hindi)
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#" className="dropdown-text" onClick={(e) => { e.preventDefault(); handleLangChange('bn'); }}>
+                        বাংলা (Bengali)
+                      </a>
+                    </li>
+                  </ul>
                 </li>
                 <li className="nav-cta-item">
                   <Link to="/#contact" className="btn nav-cta-btn" onClick={closeMenu}>Plan Your Event</Link>

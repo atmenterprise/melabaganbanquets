@@ -15,32 +15,44 @@ export default function Gallery() {
           </div>
         </div>
       </div>
-      <div className="container gallery-container">
-        {/* Card 1 */}
-        <div className="gallery-card" style={{ backgroundImage: "url('/img/gallery/5.jpg')" }}>
-          <Link to="/photogallery">
-            <div className="gallery-icon">
-              <i className="bx bx-photo-album"></i>
-            </div>
-            <div className="gallery-content">
-              <h2>{siteConfig.title} Photo Gallery</h2>
-              <br />
-              <p>Click to Explore</p>
-            </div>
-          </Link>
-        </div>
-        {/* Card 2 */}
-        <div className="gallery-card" style={{ backgroundImage: "url('/img/gallery/7.jpg')" }}>
-          <Link to="/videogallery">
-            <div className="gallery-icon">
-              <i className="bx bx-video"></i>
-            </div>
-            <div className="gallery-content">
-              <h2>A Walk Through</h2>
-              <br />
-              <p>Click to Explore</p>
-            </div>
-          </Link>
+      
+      <div className="container">
+        <div className="gallery-showcase-grid">
+          
+          {/* Card 1: Photo Gallery */}
+          <div className="gallery-card">
+            <div className="gallery-card-bg" style={{ backgroundImage: "url('/img/gallery/5.jpg')" }}></div>
+            <Link to="/photogallery" className="gallery-card-link">
+              <div className="gallery-icon-wrapper">
+                <i className="bi bi-images"></i>
+              </div>
+              <div className="gallery-card-content">
+                <span className="gallery-card-tag">Visual Tour</span>
+                <h3 className="gallery-card-title">{siteConfig.title} Photo Gallery</h3>
+                <span className="gallery-card-action">
+                  Explore Collection <i className="bi bi-arrow-right"></i>
+                </span>
+              </div>
+            </Link>
+          </div>
+
+          {/* Card 2: Video Gallery */}
+          <div className="gallery-card">
+            <div className="gallery-card-bg" style={{ backgroundImage: "url('/img/gallery/7.jpg')" }}></div>
+            <Link to="/videogallery" className="gallery-card-link">
+              <div className="gallery-icon-wrapper">
+                <i className="bi bi-play-btn-fill"></i>
+              </div>
+              <div className="gallery-card-content">
+                <span className="gallery-card-tag">Cinematic Tour</span>
+                <h3 className="gallery-card-title">{siteConfig.title} Walk Through</h3>
+                <span className="gallery-card-action">
+                  Play Showcase <i className="bi bi-arrow-right"></i>
+                </span>
+              </div>
+            </Link>
+          </div>
+
         </div>
       </div>
     </section>
