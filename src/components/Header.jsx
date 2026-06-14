@@ -1,8 +1,9 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { siteConfig } from '../config';
 
+const celebrationTypes = ["Wedding", "Reception", "Birthday", "Annaprashan", "Corporate Event"];
+
 export default function Header() {
-  const celebrationTypes = ["Wedding", "Reception", "Birthday", "Annaprashan", "Corporate Event"];
   const [currentWordIndex, setCurrentWordIndex] = useState(0);
   const [fadeClass, setFadeClass] = useState('fade-in');
 
@@ -22,21 +23,12 @@ export default function Header() {
     <header className="premium-header">
       <div className="header-content">
         <div className="container-fluid">
-          <div className="header-content-row">
-            
-            {/* Left Column: Glass Card Info */}
-            <div className="header-content-col">
-              <div className="header-glass-card wow slideInLeft">
-                
+          <div className="header-glass-card wow fadeInUp" data-wow-delay="0.15s">
+            <div className="header-grid-layout">
+              {/* Left Column: Brand Info */}
+              <div className="header-brand-section">
                 <div className="header-brand-layout">
-                  {/* Left Column: Logo Crest */}
-                  <div className="header-logo-col">
-                    <div className="header-logo-wrapper">
-                      <img src="/img/logo-2.png" alt="Melabagan Banquets Logo" className="header-logo" />
-                    </div>
-                  </div>
-
-                  {/* Right Column: Brand Info */}
+                  {/* Brand Info (Logo Removed) */}
                   <div className="header-info-col">
                     {/* Gold Rating Trust Badge */}
                     <div className="header-trust-badge">
@@ -49,20 +41,20 @@ export default function Header() {
                     </div>
 
                     <h1 className="header-title">Melabagan Banquets</h1>
-                    <h4 className="header-subtitle">where luxury meets celebration</h4>
+                    <h4 className="header-tagline">where luxury meets celebration</h4>
                     
-                    <h4 className="brand-description">
-                      A brand new banquet hall in the heart of Dum Dum, Kolkata. <br />
-                      Come and Celebrate <span className={`change-text-loop ${fadeClass}`}>{celebrationTypes[currentWordIndex]}</span> with us.
-                    </h4>
+                    <p className="brand-description">
+                      Kolkata's newest luxury destination for life's grandest milestones.
+                      Crafting timeless memories for your perfect <span className={`change-text-loop ${fadeClass}`}>{celebrationTypes[currentWordIndex]}</span>
+                    </p>
                   </div>
                 </div>
-                
+
                 <div className="header-divider-line"></div>
 
                 {/* Primary Action CTAs */}
                 <div className="header-actions">
-                  <a href={`tel:${siteConfig.phone_main}`} className="btn btn-header-primary booknow-btn">
+                  <a href={`tel:${siteConfig.phone_main}`} className="btn btn-header-secondary booknow-btn">
                     <i className="bx bxs-phone-call"></i>
                     <span>Call Venue</span>
                   </a>
@@ -88,24 +80,19 @@ export default function Header() {
                     <i className="bx bxl-google"></i>
                   </a>
                 </div>
-
               </div>
-            </div>
 
-            {/* Right Column: Floating Video Card */}
-            <div className="header-content-col header-video">
-              <div className="header-video-frame wow slideInRight">
-                
-                <span className="video-tour-badge">
-                  <i className="bx bx-play-circle"></i> Venue Tour
-                </span>
-                <div className="header-video-wrapper">
-                  <iframe
-                    src="https://player.vimeo.com/video/1130382537?autoplay=1&loop=1&badge=0&autopause=0&player_id=0&app_id=58479"
-                    frameBorder="0"
-                    allow="autoplay; fullscreen"
-                    title="Ayush & Meghana Engagement Story at Melabagan Banquets"
-                  ></iframe>
+              {/* Right Column: Integrated Video Section */}
+              <div className="header-video-section">
+                <div className="header-video-inner">
+                  <div className="header-video-wrapper">
+                    <iframe
+                      src="https://player.vimeo.com/video/1130382537?autoplay=1&loop=1&badge=0&autopause=0&player_id=0&app_id=58479"
+                      frameBorder="0"
+                      allow="autoplay; fullscreen"
+                      title="Ayush & Meghana Engagement Story at Melabagan Banquets"
+                    ></iframe>
+                  </div>
                 </div>
               </div>
             </div>

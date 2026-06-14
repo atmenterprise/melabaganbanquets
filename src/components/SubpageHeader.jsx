@@ -7,9 +7,9 @@ export default function SubpageHeader({ title }) {
       <div className="subpage-header-overlay">
         <div className="subpage-header-content text-center">
           <h1 className="subpage-header-title">{title}</h1>
-          <div className="header-divider-container">
+          {/*<div className="header-divider-container">
             <img src="/img/divider.png" alt="divider" className="header-divider-img" />
-          </div>
+          </div> */}
         </div>
       </div>
     </div>

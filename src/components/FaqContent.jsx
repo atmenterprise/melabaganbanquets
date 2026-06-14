@@ -170,8 +170,10 @@ export default function FaqContent({ closeModal }) {
       <p className="strong disclaimer-subtitle">
         15. Is Alcohol allowed?
       </p>
-      <div className="feature-icon" style={{ display: 'flex', alignItems: 'center', gap: '15px', marginBottom: '20px' }}>
-        <img src="/img/icons/no-alcohol.png" className="wow pulse" alt="no-alcohol-icon" style={{ width: '60px' }} />
+      <div className="faq-icon-row">
+        <div className="faq-icon-box">
+          <img src="/img/icons/no-alcohol.png" className="wow pulse" alt="no-alcohol-icon" />
+        </div>
         <p style={{ margin: 0 }}>
           No. It is an <strong>ALCOHOL-FREE</strong> venue and is strictly prohibited within the venue premises.
         </p>
@@ -180,8 +182,10 @@ export default function FaqContent({ closeModal }) {
       <p className="strong disclaimer-subtitle">
         16. Is Smoking allowed?
       </p>
-      <div className="feature-icon" style={{ display: 'flex', alignItems: 'center', gap: '15px', marginBottom: '20px' }}>
-        <img src="/img/icons/no-smoking.png" className="wow pulse" alt="no-smoking-icon" style={{ width: '60px' }} />
+      <div className="faq-icon-row">
+        <div className="faq-icon-box">
+          <img src="/img/icons/no-smoking.png" className="wow pulse" alt="no-smoking-icon" />
+        </div>
         <p style={{ margin: 0 }}>
           No. Smoking cigarettes and e-cigarettes is strictly not allowed.
         </p>
@@ -190,8 +194,10 @@ export default function FaqContent({ closeModal }) {
       <p className="strong disclaimer-subtitle">
         17. Is Wi-Fi available for guests?
       </p>
-      <div className="feature-icon" style={{ display: 'flex', alignItems: 'center', gap: '15px', marginBottom: '20px' }}>
-        <img src="/img/icons/wifi.png" className="wow pulse" alt="wifi-icon" style={{ width: '60px' }} />
+      <div className="faq-icon-row">
+        <div className="faq-icon-box">
+          <img src="/img/icons/wifi.png" className="wow pulse" alt="wifi-icon" />
+        </div>
         <p style={{ margin: 0 }}>
           Yes a complimentary WiFi is available to limited selected guests throughout the venue.
           Please note, the venue also has strong cellular network connection to ensure 4G/5G data network is easily available.

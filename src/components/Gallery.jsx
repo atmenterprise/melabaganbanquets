@@ -28,7 +28,7 @@ export default function Gallery() {
               </div>
               <div className="gallery-card-content">
                 <span className="gallery-card-tag">Visual Tour</span>
-                <h3 className="gallery-card-title">{siteConfig.title} Photo Gallery</h3>
+                <h3 className="gallery-card-title">Photo Gallery</h3>
                 <span className="gallery-card-action">
                   Explore Collection <i className="bi bi-arrow-right"></i>
                 </span>
@@ -45,7 +45,7 @@ export default function Gallery() {
               </div>
               <div className="gallery-card-content">
                 <span className="gallery-card-tag">Cinematic Tour</span>
-                <h3 className="gallery-card-title">{siteConfig.title} Walk Through</h3>
+                <h3 className="gallery-card-title">Video Gallery</h3>
                 <span className="gallery-card-action">
                   Play Showcase <i className="bi bi-arrow-right"></i>
                 </span>
