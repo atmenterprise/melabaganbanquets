@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import { siteConfig } from '../config';
 
 const celebrationTypes = ["Wedding", "Reception", "Birthday", "Annaprashan", "Corporate Event"];
@@ -41,8 +41,10 @@ export default function Header() {
                     </div>
 
                     <h1 className="header-title">Melabagan Banquets</h1>
-                    <h4 className="header-tagline">where luxury meets celebration</h4>
-                    
+                    <h3 className="header-tagline">where luxury meets celebration</h3>
+                    <section className="divider">
+                      <img src="/img/divider.png" alt="divider" />
+                    </section>
                     <p className="brand-description">
                       Kolkata's newest luxury destination for life's grandest milestones.
                       Crafting timeless memories for your perfect <span className={`change-text-loop ${fadeClass}`}>{celebrationTypes[currentWordIndex]}</span>
@@ -54,7 +56,7 @@ export default function Header() {
 
                 {/* Primary Action CTAs */}
                 <div className="header-actions">
-                  <a href={`tel:${siteConfig.phone_main}`} className="btn btn-header-secondary booknow-btn">
+                  <a href={`tel:${siteConfig.phone_main}`} className="btn btn-header-primary booknow-btn">
                     <i className="bx bxs-phone-call"></i>
                     <span>Call Venue</span>
                   </a>

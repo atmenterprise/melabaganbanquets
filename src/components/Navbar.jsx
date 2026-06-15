@@ -106,12 +106,16 @@ export default function Navbar() {
   };
 
   // Determine navbar classes
-  const navClass = `navbar navbar-default navbar-fixed-top navbar-home ${isAffixed ? 'affix' : ''} ${isOpen ? 'menu-open' : ''}`;
+  const navClass = `navbar navbar-default navbar-fixed-top ${isHome ? 'navbar-home' : 'navbar-subpage'} ${isAffixed ? 'affix' : ''} ${isOpen ? 'menu-open' : ''}`;
 
   return (
     <nav id="mainNav" className={navClass}>
       <div className="container">
         <div className="navbar-header">
+          <Link className="navbar-brand page-scroll" to="/" onClick={closeMenu}>
+            <span className="nav-brand-text">Melabagan Banquets</span>
+          </Link>
+
           <button
             type="button"
             className={`navbar-toggle ${isOpen ? '' : 'collapsed'}`}
@@ -123,16 +127,15 @@ export default function Navbar() {
             <span className="icon-bar"></span>
             <span className="icon-bar"></span>
           </button>
-          
-          <Link className="navbar-brand page-scroll" to="/" onClick={closeMenu}>
-            <span className="nav-brand-text">Melabagan Banquets</span>
-          </Link>
         </div>
 
         <div className={`collapse navbar-collapse ${isOpen ? 'in' : ''}`} id="bs-example-navbar-collapse-1">
           <ul className="nav navbar-nav navbar-right">
             {isHome ? (
               <>
+                <li className="nav-home-item">
+                  <a className="page-scroll" href="#mainNav" onClick={(e) => handleHashLink(e, '#mainNav')}>Home</a>
+                </li>
                 <li>
                   <a className="page-scroll" href="#about" onClick={(e) => handleHashLink(e, '#about')}>About Us</a>
                 </li>
@@ -217,6 +220,9 @@ export default function Navbar() {
               </>
             ) : (
               <>
+                <li className="nav-home-item">
+                  <Link className="page-scroll" to="/" onClick={closeMenu}>Home</Link>
+                </li>
                 <li>
                   <Link className="page-scroll" to="/#about" onClick={closeMenu}>About Us</Link>
                 </li>
@@ -300,22 +306,6 @@ export default function Navbar() {
                 </li>
               </>
             )}
-
-            <li className="social-mobile">
-              <a href={siteConfig.facebook_url} className="btn" target="_blank" rel="noopener noreferrer">
-                <i className="bi bi-facebook socialicon-sm"></i>
-              </a>
-            </li>
-            <li className="social-mobile">
-              <a href={siteConfig.instagram_url} className="btn" target="_blank" rel="noopener noreferrer">
-                <i className="bi bi-instagram socialicon-sm"></i>
-              </a>
-            </li>
-            <li className="social-mobile">
-              <a href={siteConfig.whatsapp_url} className="btn" target="_blank" rel="noopener noreferrer">
-                <i className="bi bi-whatsapp socialicon-sm"></i>
-              </a>
-            </li>
           </ul>
         </div>
       </div>

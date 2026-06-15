@@ -31,7 +31,7 @@ export default function About() {
               <a href="#contact" rel="noopener noreferrer" className="btn btn-about-cta">
                 <i className="bi bi-calendar3-event btn-icon"></i> Book Site Visit
               </a>
-              <a href="#features" className="btn btn-about-cta-secondary">
+              <a href="#features" className="btn btn-about-cta">
                 <i className="bi bi-list-stars btn-icon"></i> View Banquet Features
               </a>
             </div>

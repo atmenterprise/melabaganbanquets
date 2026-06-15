@@ -40,5 +40,23 @@ export const reviews = [
     author: "Nizamuddin Khan",
     link: "",
     description: "The venue was good and the service was good as well"
+  },
+  {
+    id: 8,
+    author: "DIP201285",
+    link: "https://maps.app.goo.gl/gnMM8PXT1tjKj6B38",
+    description: "I booked Melabagan Banquet, Dum Dum to celebrate my son’s 5th birthday, and the experience was thoroughly enjoyable. From the outset, the staff were courteous, attentive, and well organised, which ensured the event ran smoothly and without any stress. The venue is spacious and thoughtfully laid out, allowing guests to move around comfortably. The property is well maintained, tasteful, and quietly classy, while the decorations were done with care, creating a pleasant and cheerful birthday setting. A major advantage, especially these days, is the ample car parking facility, which made it very convenient for guests—something that is increasingly rare and highly appreciated. The pricing is quite reasonable for the quality of service and facilities offered, making it excellent value within Dum Dum and the surrounding areas. Throughout the event, there was not a single issue or complaint, reflecting the professionalism of the team. A special mention must go to the owner, Shivam. His warm presence, polite manner, and hands-on approach added a personal touch. Thanks to his involvement and the team’s support, my son’s birthday became a truly memorable occasion."
+  },
+  {
+    id: 9,
+    author: "Somnath Ganguly",
+    link: "https://maps.app.goo.gl/FWUHxXmNy2MudLuk7",
+    description: "They make great arrangements to make your special day even more special"
+  },
+  {
+    id: 10,
+    author: "Lalita Dutta",
+    link: "https://maps.app.goo.gl/Jk5xjwwRpvmY47BJA",
+    description: "It is a new one in the locality and has become a popular one since inception. Owner is a young man having rare combination of professional, innovative, energetic, emotional mind with sweet behavior and plans to do better - essential for customers / visitors satisfaction. Melabagan Banquets has every modern facilities including sufficient car parking area; a small water body and a temple inside; easy access through road, local train and metro line. In no time this banquet will become the best choice for any kind of social occasion 😊"
   }
 ];

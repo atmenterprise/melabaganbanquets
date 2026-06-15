@@ -82,6 +82,45 @@ export default function Testimonial() {
           </div>
         </div>
 
+        {/* Testimonial Metrics Row */}
+        <div className="testimonial-metrics-row">
+          <div className="metric-card google-rating">
+            <div className="metric-icon-box">
+              <i className="bi bi-google"></i>
+            </div>
+            <div className="metric-info">
+              <div className="metric-top">
+                <span className="metric-value">4.5</span>
+                <span className="metric-scale">/ 5.0</span>
+              </div>
+              <p className="metric-label">Google Rating</p>
+              <p className="metric-subtext">Over 100+ reviews</p>
+            </div>
+          </div>
+
+          <div className="metric-card">
+            <div className="metric-icon-box">
+              <i className="bi bi-patch-check"></i>
+            </div>
+            <div className="metric-info">
+              <span className="metric-value">99%</span>
+              <p className="metric-label">Guest Satisfaction</p>
+              <p className="metric-subtext">Highly recommended venue</p>
+            </div>
+          </div>
+
+          <div className="metric-card">
+            <div className="metric-icon-box">
+              <i className="bi bi-calendar-check"></i>
+            </div>
+            <div className="metric-info">
+              <span className="metric-value">100+</span>
+              <p className="metric-label">Successful Events</p>
+              <p className="metric-subtext">Weddings & Celebrations</p>
+            </div>
+          </div>
+        </div>
+
         {/* Swiper Carousel Wrapper */}
         <div className="testimonial-carousel-wrapper">
           <div className="testimonial swiper mySwiper">
@@ -112,9 +151,22 @@ export default function Testimonial() {
                             <i className="bi bi-star-fill"></i>
                           </div>
                         </div>
-                        <div className="google-badge-icon">
-                          <i className="bi bi-google"></i>
-                        </div>
+                        {item.link ? (
+                          <a 
+                            href={item.link} 
+                            target="_blank" 
+                            rel="noopener noreferrer" 
+                            className="google-badge-icon clickable"
+                            onClick={(e) => e.stopPropagation()}
+                            title="View review on Google"
+                          >
+                            <i className="bi bi-google"></i>
+                          </a>
+                        ) : (
+                          <div className="google-badge-icon">
+                            <i className="bi bi-google"></i>
+                          </div>
+                        )}
                       </div>
 
                       {/* Card Quote Text - Truncated for equal heights */}
@@ -215,7 +267,7 @@ export default function Testimonial() {
                 <span>Verified Google Review</span>
               </div>
               <a 
-                href={siteConfig.google_reviews_url} 
+                href={activeReview.link || siteConfig.google_reviews_url} 
                 target="_blank" 
                 rel="noopener noreferrer" 
                 className="btn btn-modal-google"
